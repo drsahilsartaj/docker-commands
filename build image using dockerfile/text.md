@@ -23,3 +23,26 @@ Your company is still working on that new spam filter! Your colleague Bob made p
 
 > run Bob's container, spam_bob:v3 <br>
 `docker run spam_bob:v3`
+
+-------
+
+### Dockerfile Instructions
+
+| Usage                                     | Dockerfile Instruction             |
+|------------------------------------------|------------------------------------|
+| Start a Dockerfile from an image         | `FROM <image-name>` eg. FROM postgres:15.0 **,** FROM hello-world               |
+| Add a shell command to image             | `RUN <valid-shell-command>`  --> eg. RUN apt-get update **,** RUN apt-get install -y python3    |
+
+---
+
+### Shell Commands for Building Docker Images
+
+| Usage                                      | Shell Command                              |
+|-------------------------------------------|-------------------------------------------|
+| Build image from Dockerfile               | `docker build /location/to/Dockerfile`    |
+| Build image in current working directory  | `docker build .`                          |
+| Choose a name when building an image      | `docker build -t first_image .`           |
+
+
+
+
