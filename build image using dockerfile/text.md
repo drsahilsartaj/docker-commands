@@ -92,6 +92,8 @@ Your company is still working on that new spam filter! Your colleague Bob made p
 `5. Save the file and exit nano using CTRL+s and CTRL+x`
 
 > 4. Using the terminal, run the command to build an image called pipeline from the Dockerfile in your current working directory. <br>
+`docker build -t pipeline .`
+----
 
 
 
