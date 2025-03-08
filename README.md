@@ -1,11 +1,19 @@
 # Build Docker image from a Dockerfile
-`docker build '<DockerFile-Path>'`
+`docker build <DockerFile-Path>` <br>
+
+# To name the image 
+`docker build -t <image-name>:tag .` <br>
+In the place of **image-name**, use the image's name and give the **tag number** if you want. And **.** “dot” represents the current directory.
+Remember: use the Dockerfile as the source
+
+# Check list of images
+`docker image ls` or `docker images`
 
 # Creates and runs Docker container from Docker image
 `docker run <image-name>`
 
-# Docker container output
-`docker run <image-name>`
+# To give name of container
+`docker run --name <container_name> <image_name>`
 
 # Interactive docker container
 `docker run -it <image-name>`
@@ -19,11 +27,11 @@
 # Stop running containers
 `docker stop <container-id>`
 
-# Name a container then run
-`docker run --name <container-name> <image-name>`
-
 # Stop container by using container name
 `docker stop <container-name>`
+
+# Docker Start Container
+`docker start <container-id>`
 
 # Filtering running containers
 `docker ps -f "name=<container-name>"`
