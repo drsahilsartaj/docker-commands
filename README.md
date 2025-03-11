@@ -16,19 +16,24 @@ Remember: use the Dockerfile as the source
 `docker run --name <container_name> <image_name>`
 
 # Interactive docker container
-`docker run -it <image-name>`
+`docker run -it <image-name>` <br>
+**NOTE**: When type `exit` inside the container, the container **stops** automatically
 
 # Running detached (in the background) container
-`docker run -d <image-name>`
+`docker run -d <image-name>` <br>
+**NOTE**: The container keeps running in the background after you **exit**
 
 # List running containers
 `docker ps`
 
+# List all containers (including stopped ones)
+`docker ps -a`
+
 # Stop running containers
 `docker stop <container-id>`
 
-# Stop container by using container name
-`docker stop <container-name>`
+# Access a Running Container
+`docker exec -it <container_id> bash`
 
 # Docker Start Container
 `docker start <container-id>`
