@@ -2,8 +2,8 @@
 `docker build <DockerFile-Path>` <br>
 
 # To name the image 
-`docker build -t <image-name>:tag .` <br>
-In the place of **image-name**, use the image's name and give the **tag number** if you want. And **.** “dot” represents the current directory.
+`docker build --tag <image-name> .` <br>
+In the place of **image-name**, use the image's name. **.** “dot” represents the current directory.
 Remember: use the Dockerfile as the source
 
 # Check list of images
