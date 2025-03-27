@@ -1,7 +1,7 @@
 # Build Docker image from a Dockerfile
 `docker build <DockerFile-Path>` <br>
 
-# To name the image 
+**To name the image** <br>
 `docker build --tag <image-name> .` <br>
 In the place of **image-name**, use the image's name. Here, **.** “dot” represents the current directory.
 Remember: use the Dockerfile as the source
@@ -12,28 +12,36 @@ Remember: use the Dockerfile as the source
 # Creates and runs Docker container from Docker image
 `docker run <image-name>`
 
-# To give name of container
+**To give name of container** <br>
 `docker run --name <container_name> <image_name>`
 
-# Interactive docker container
+**Interactive docker container** <br>
 `docker run -it <image-name>` <br>
 **NOTE**: When type `exit` inside the container, the container **stops** automatically
 
-# Running detached (in the background) container
+**Running detached (in the background) container** <br>
 `docker run -d <image-name>` <br>
 **NOTE**: The container keeps running in the background after you **exit**
 
 # List running containers
 `docker ps`
 
-# List all containers (including stopped ones)
+**List all containers (including stopped ones)** <br>
 `docker ps -a`
 
 # Stop running containers
 `docker stop <container-id>`
 
 # Access a Running Container
-`docker exec -it <container_id> bash`
+`docker exec -it <container_id> /bin/bash` <br>
+**NOTE**: <br>
+If the container is already **running**, then this above cmd will work, but if the container is **stopped** then use this cmd instead `docker start -ai <container-id>` <br>
+**NOTE**: <br>
+- If a container has stopped and you want to resume it with an interactive session.
+- Useful when a container was originally started in interactive mode (docker run -it).
+- Won’t work if the container was started with -d (detached mode), as it doesn’t have an attached terminal.
+-This resumes the stopped container with ID b86e903c9737 and reattaches to its terminal.
+
 
 # Docker Start Container
 `docker start <container-id>`
