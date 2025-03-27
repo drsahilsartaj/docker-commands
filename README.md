@@ -70,3 +70,15 @@ Remember: use the Dockerfile as the source
 `docker container prune -a`
 
 ### **Note**: This command removes images which are not used by any running container, so remove all unused images (like dangling images)
+
+
+# docker-compose up vs docker run <image_name>
+> `docker-compose` works with multiple services, and `docker run` works on a single service. Like **Running multiple containers together (app + DB)** --> Use docker-compose up and **Running a single container** --> Use docker run <image-name>
+
+> If your **Dockerfile** contains multiple FROM statements (multiple images), only the **last one** is used to create the final image.
+
+> When to Use docker-compose up? <br>
+>> If you need multiple containers (e.g., a web app + database). <br>
+>> If your app has dependencies running as separate services.<br>
+ 
+> Example: If you have an ubuntu image, then we have to use docker run else, we have multiple containers/images like ubuntu+db then we use docker-compose to run the services.
