@@ -3,7 +3,7 @@
 
 # To name the image 
 `docker build --tag <image-name> .` <br>
-In the place of **image-name**, use the image's name. **.** “dot” represents the current directory.
+In the place of **image-name**, use the image's name. Here, **.** “dot” represents the current directory.
 Remember: use the Dockerfile as the source
 
 # Check list of images
